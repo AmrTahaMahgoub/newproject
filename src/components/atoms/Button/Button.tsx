@@ -16,9 +16,9 @@ import { getHeight, scale } from '../../../styles/dimensions';
 import ViewRow from '../ViewRow/ViewRow';
 export type RotateTypes = 'left' | 'right' | 'top' | 'bottom';
 export type IconsName =
-  "ArrowBack" |
-  "AreaIcon"|
-  "ArrowForward"
+  "Search" |
+  "Listalignleft"
+ 
 export interface ButtonIconsProps {
     color?: string;
     width?: number;
@@ -42,7 +42,11 @@ type ButtonProps = {
     iconRotate?: RotateTypes,
     iconStyle?: ButtonIconsProps,
     value?: string,
-    loading?: boolean
+    loading?: boolean,
+    iconContainerStyle?: StyleProp<ViewStyle>,
+    textContainerStyle?: StyleProp<TextStyle>,
+    onPressed?: ()=> void,
+    
 }
 export const Button = (props: ButtonProps & TouchableOpacityProps & GenericTouchableProps) => {
     switch (props.type) {
@@ -113,7 +117,7 @@ const CustomButton = (props: ButtonProps & TouchableOpacityProps & GenericToucha
                 <Text type={"bold12"} style={styles.value}>{props.value}</Text>
                 <SvgIcon
                     rotate={props.iconRotate}
-                    name={props.icon || "ArrowBack"}
+                    name={props.icon || "Search"}
                     width={scale(9)}
                     height={scale(20)}
                     {...props.iconStyle}
@@ -126,7 +130,7 @@ const CustomButton = (props: ButtonProps & TouchableOpacityProps & GenericToucha
 
 
 
-const DefultButton = (props: ButtonProps & TouchableOpacityProps & GenericTouchableProps) => {
+const DefultButton = (props: ButtonProps & TouchableOpacityProps & GenericTouchableProps ) => {
     const textProps = {
         color: props.color,
         type: props.textType,
@@ -134,6 +138,7 @@ const DefultButton = (props: ButtonProps & TouchableOpacityProps & GenericToucha
     }
     return (
         <TouchableOpacity
+      
             style={styles.container}
             {...props}
         >

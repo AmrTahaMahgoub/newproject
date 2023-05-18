@@ -6,18 +6,18 @@ const styles = StyleSheet.create({
   bold12: {
     fontFamily: Typography.BOLD,
     fontSize: Typography.FS11,
-    color: Colors.DARK_GRAY,
+    color: "red",
     marginTop: getHeight(5),
   },
   bold11: {
     fontFamily: Typography.BOLD,
     fontSize: Typography.FS13,
-    color: Colors.DARK_GRAY,
+    color: "yellow",
   },
   regular14: {
     fontFamily: Typography.MEDIUM,
     fontSize: Typography.FS13,
-    color: Colors.DARK_GRAY,
+    color: "green",
     marginTop: getHeight(5),
   },
 

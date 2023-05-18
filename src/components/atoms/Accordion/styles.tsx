@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Colors, Typography } from '../../../styles';
+import { Colors, Spacing, Typography } from '../../../styles';
 import { getHeight, getWidth, scale } from '../../../styles/dimensions';
 const styles = StyleSheet.create({
     container: {
@@ -28,6 +28,33 @@ const styles = StyleSheet.create({
         padding: getWidth(16),
         paddingTop: getHeight(10),
        // lineHeight: Typography.BOLD
+    }
+    ,
+    container2: {
+        width: "100%",
+        overflow: "hidden",
+        marginBottom: 10
+    },
+    headerContainer: {
+        backgroundColor: Colors.GRAY_FBFBFB,
+        height: getHeight(35),
+        alignItems: "center",
+        paddingTop: 0,
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    title: {
+        paddingHorizontal: Spacing.S20
+    },
+    toggleButton: { paddingHorizontal: Spacing.S20 },
+    toggleButtonContainer: {
+        width: "20%",
+        height: "100%",
+        alignItems: "flex-end"
+    },
+    toggleIcon: {
+        width: scale(12),
+        height: scale(12)
     }
 
 });
