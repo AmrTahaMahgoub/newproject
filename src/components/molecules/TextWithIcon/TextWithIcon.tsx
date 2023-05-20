@@ -1,13 +1,15 @@
 
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
 import SvgIcon, { IconsName } from '../../../assets/svgs';
 
-import { Text } from '../../atoms';
+
 import { ViewRow } from '../../atoms';
 import { getHeight, getWidth, scale } from '../../../styles/dimensions';
-import { TextTypes } from '../../atoms/Text/Text';
+import Text from '../../atoms/Text/Text';
+import { TextTypes } from '../../atoms/Button/Button';
+
 
 type sizeTypes = `small` | `big` | `large`
 type ButtonProps = {
@@ -17,7 +19,7 @@ type ButtonProps = {
     text: string,
     size: sizeTypes
 }
-export const TextWithIcon = ({
+ const TextWithIcon = ({
     children,
     size,
     icon,
@@ -31,7 +33,7 @@ export const TextWithIcon = ({
                 height={getStyle(size).height}
             />
             <Text style={{ paddingHorizontal: getWidth(5) }}
-                type={getStyle(size).textType}>{text}</Text>
+              >{text}</Text>
         </ViewRow>
     )
 }
@@ -50,3 +52,4 @@ const getStyle = (size: sizeTypes): {
             return { width: scale(13.64), height: scale(13.64), textType: "bold11" }
     }
 }
+export default memo(TextWithIcon)

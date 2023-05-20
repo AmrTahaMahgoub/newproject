@@ -4,7 +4,7 @@ import { TouchableOpacity, StyleProp, TextStyle, TouchableOpacityProps, ViewStyl
 import { GenericTouchableProps } from 'react-native-gesture-handler/lib/typescript/components/touchables/GenericTouchable';
 
 
-import SvgIcon from '../../../assets/svgs';
+import SvgIcon, { IconsName } from '../../../assets/svgs';
 
 import { Colors } from '../../../styles';
 
@@ -15,9 +15,7 @@ import Text from '../Text/Text';
 import { getHeight, scale } from '../../../styles/dimensions';
 import ViewRow from '../ViewRow/ViewRow';
 export type RotateTypes = 'left' | 'right' | 'top' | 'bottom';
-export type IconsName =
-  "Search" |
-  "Listalignleft"
+
  
 export interface ButtonIconsProps {
     color?: string;
@@ -88,9 +86,9 @@ const StandardButton = (props: ButtonProps & TouchableOpacityProps & GenericTouc
             />}
             {(props.text && !props.loading) && <Text
                 style={props.textstyle}
-                color={Colors.WHITE}
-                type={props.textType || "bold11"}
-
+               
+               color="BLACK"
+fontFamily='BOLDLATO'
             >{props.text}</Text>}
             {props.children}
         </TouchableOpacity>
@@ -110,11 +108,11 @@ const CustomButton = (props: ButtonProps & TouchableOpacityProps & GenericToucha
             style={[styles.customButtonContainer, props.style]}
         >
             <Text
-                type={"bold12"}
-                color={Colors.DARK_GRAY}
+                fontFamily='BOLDLATO'
+                color="CHARCOAL"
                 style={[{ marginTop: 0 }, props.textstyle]}>{props.text}</Text>
             <ViewRow style={{ alignItems: "center" }}>
-                <Text type={"bold12"} style={styles.value}>{props.value}</Text>
+                <Text fontFamily='BOLDLATO' style={styles.value}>{props.value}</Text>
                 <SvgIcon
                     rotate={props.iconRotate}
                     name={props.icon || "Search"}
@@ -153,7 +151,8 @@ const DefultButton = (props: ButtonProps & TouchableOpacityProps & GenericToucha
             />}
             {props.text && <Text
 
-                {...textProps}
+
+         
 
             >{props.text}</Text>}
             {props.children}

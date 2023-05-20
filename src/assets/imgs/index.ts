@@ -1,8 +1,8 @@
 
 
 export const images = {
-    logo: require('./logo.png'),
-    header: require('./header.png'),
-    camera: require('./camera.png'),
-    gallery: require('./gallery.png'),
+    football50: require('./football50.png'),
+    football100: require('./football100.png'),
+    football200: require('./football200.png'),
+   
 };

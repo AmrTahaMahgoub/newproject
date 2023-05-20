@@ -3,20 +3,26 @@ import React, {
     memo
 } from 'react';
 import {
-    TouchableOpacityProps,
+    TouchableOpacityProps
 
-} from 'react-native/types';
+} from 'react-native';
 
 import styles from './styles';
 import { Button } from '../Button/Button';
 
-const Card: FC<TouchableOpacityProps> = ({ style, onPress, ...props }) => {
+
+
+
+
+const Card: FC<TouchableOpacityProps> = ({ style,children }) => {
     return (
         <Button
-           // onPress={onPress}
+
             style={[styles.cardContainer, style]}
-            {...props}
-        />
+             
+        >
+         {children}  
+        </Button>
     )
 }
 export default memo(Card)

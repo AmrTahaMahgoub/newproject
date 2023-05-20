@@ -1,25 +1,61 @@
-import React from 'react';
-import {StyleProp, StyleSheet, Text, TextStyle} from 'react-native';
 
-import styles from './styles';
-export type TextTypes =
-  | `bold12`
-  | 'bold11'
-  | 'regular14'
-  
-interface TextProps {
-  children?: string;
-  style?: StyleProp<TextStyle>;
-  type?: TextTypes;
-  color?: string;
+import React, {
+    memo,
+    FC
+} from "react";
+import {
+    TextProps as RNTextProps,
+    StyleSheet,
+    StyleProp,
+    TextStyle,
+    Text
+} from "react-native";
+
+
+import {
+    ColorsTypes
+} from "../../../styles/colors";
+
+import styles from "./styles";
+import { Colors, Typography } from "../../../styles";
+import { FontFamilyTypes, FontSizeTypes } from "../../../styles/typography";
+
+export type TextProps = {
+    color?: keyof ColorsTypes,
+    fontFamily?: keyof FontFamilyTypes,
+    fontSize?: keyof FontSizeTypes
 }
-const TextBold12 = ({children, style, type, color}: TextProps & TextStyle) => {
-  return (
-    <Text
-      style={[styles[type || 'bold12'], color ? {color: color} : {}, style]}>
-      {children}
-    </Text>
-  );
-};
 
-export default TextBold12;
+type TextStyleTypes = StyleProp<TextStyle>
+
+const CustomText: FC<RNTextProps & TextProps> = (props) => {
+    return (
+       <React.Fragment>
+            <Text
+                {...props}
+                style={StyleSheet.flatten([styles.textStyle, customStyles(props), props.style])}
+            />
+        </React.Fragment>
+    )
+}
+
+CustomText.defaultProps = {
+    color: "PRIMARY1",
+    fontFamily: "BOLDROBOTO",
+    fontSize: "P"
+}
+
+const customStyles = ({
+    fontFamily,
+    fontSize,
+    color
+}: TextProps) => {
+    const _styles: TextStyleTypes = {
+        color: Colors[color || "PRIMARY1"],
+        fontFamily: Typography[fontFamily || "BOLDROBOTO"],
+        fontSize: Typography[fontSize || "P"]
+    }
+    return _styles
+}
+
+export default memo(CustomText)

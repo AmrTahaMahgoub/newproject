@@ -6,37 +6,41 @@ import {
 } from './dimensions';
 
 
-// type FontFamilyTypes = {
-//     REGULAR: number,
-//     MEDIUM: number,
-//     BOLD: number
-// }
+export type  FontFamilyTypes = {
+    REGULARROBOTO: string,
+    MEDIUMROBOTO: string,
+    BOLDROBOTO: string,
+    REGULARLATO: string,
+    THINLATO: string,
+    BOLDLATO: string,
+    ITALICROBOTO: string
+}
 
 
-// type FontSizeTypes = {
-//     H1: number,
-//     H2: number,
-//     H3: number,
-//     H4: number,
-//     P: number,
-//     FS18: number,
-//     FS14: number,
-//     FS13: number,
-//     FS16: number,
-//     FS12: number,
-//     FS11: number,
-//     FS7: number
-//     FS10: number
-//     FS8: number
-// }
+export type FontSizeTypes = {
+    H1: number,
+    H2: number,
+    H3: number,
+    H4: number,
+    P: number,
+    FS18: number,
+    FS14: number,
+    FS13: number,
+    FS16: number,
+    FS12: number,
+    FS11: number,
+    FS7: number
+    FS10: number
+    FS8: number
+}
 
 
-export const REGULARROBOTO = "Roboto-Regular" 
-export const MEDIUMROBOTO =  "Roboto-Medium" 
-export const BOLDROBOTO =  "Roboto-Bold" 
-export const REGULARLATO = "Lato-Regular" 
-export const THINLATO =  "Lato-Thin" 
-export const BOLDLATO =  "Lato-Bold"
+export const REGULARROBOTO = "Roboto-Regular"
+export const MEDIUMROBOTO = "Roboto-Medium"
+export const BOLDROBOTO = "Roboto-Bold"
+export const REGULARLATO = "Lato-Regular"
+export const THINLATO = "Lato-Thin"
+export const BOLDLATO = "Lato-Bold"
 export const ITALICROBOTO = "Roboto-Italic"
 
 
@@ -54,4 +58,7 @@ export const FS7 = scale(7);
 export const FS10 = scale(10);
 export const FS13 = scale(13);
 export const FS8 = scale(8);
-
+// export type {
+//     FontSizeTypes,
+//     FontFamilyTypes
+// }

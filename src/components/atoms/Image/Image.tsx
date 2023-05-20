@@ -20,7 +20,7 @@ export const Image = (props: FastImageProps) => {
                 styles.container,
                 props.style])}
             resizeMode={props.resizeMode}
-            source={(typeof props.source === "number" || props.source?.uri) ? props.source : images.logo} />
+            source={(typeof props.source === "number" || props.source?.uri) ? props.source : images.football100} />
     )
 }
 
