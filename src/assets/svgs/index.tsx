@@ -43,8 +43,8 @@ export type IconsName =
   "Check" |
   "Notification" |
   "Filter" |
-  "Heart"|
-  null
+  "Heart"
+  
 
 export type RotateTypes = 'left' | 'right' | 'top' | 'bottom';
 export interface IconsProps {

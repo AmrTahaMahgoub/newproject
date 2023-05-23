@@ -1,112 +1,72 @@
-// import React from "react";
+import React, {useState} from 'react';
+import {Dimensions, FlatList, Image, SectionList, View} from 'react-native';
+import AdverList from '../../../components/organisms/AdverList/AdverList';
+import {getHeight, getWidth, scale} from '../../../styles/dimensions';
+import {Header} from '../../../components/molecules';
+import {DATA, Section, AdverListImages} from '../../../redux/api/api';
+import AdverListItem from '../../../components/organisms/AdverList/AdverList';
+import Text from '../../../components/atoms/Text/Text';
+import styles from './styles';
+import EducationAndHealthItem from '../../../components/organisms/EducationAndHealth/EducationAndHealth';
+import {Colors, Spacing} from '../../../styles';
+import SnapCarousel from '../../../components/organisms/AdverList/SnapCarousel';
 
-// import { View } from "react-native";
-
-// import Text from "../../../components/atoms/Text/Text";
-// import { Header } from "../../../components/molecules";
-// import { getWidth } from "../../../styles/dimensions";
-// import { Image } from "../../../components/atoms";
-// import Card from "../../../components/atoms/Card/Card";
-
-
-
-
-
-// function TemplateOne (){
-//   return (<View style={{paddingHorizontal:getWidth(16), paddingTop:getWidth(16)}}>
-//     <Header title={null} icon={null} ></Header>
-//     {/* <Image></Image> */}
-//     <Card style={{height:200}}>
-//     <Image ></Image>
-//     </Card>
-//   </View>)
-// }
-// export default TemplateOne
-import React, { useState } from 'react';
-import { StyleSheet, View, FlatList, Dimensions } from 'react-native';
-import { Image } from '../../../components/atoms/Image/Image';
-import { images } from '../../../assets/imgs';
-
-const { width, height } = Dimensions.get('window');
-
-const image = [
-  { id: '1', source:images.football50 },
-  { id: '2', source:images.football100 },
- 
-];
-
-const ImageCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleImageScroll = (event:any) => {
-    const offsetX = event.nativeEvent.contentOffset.x;
-    const index = Math.floor(offsetX / width);
-    setActiveIndex(index);
-  };
-
-  const renderImageItem = ({ item }:any) => {
-    return (
-      <View style={styles.imageContainer}>
-        <Image source={item.source} style={styles.image} />
-      </View>
-    );
-  };
-
-  const renderDotIndicator = ({ item, index }:any) => {
-    return (
-      <View
-        style={[
-          styles.dot,
-          { backgroundColor: index === activeIndex ? 'white' : 'rgba(255, 255, 255, 0.5)' },
-        ]}
-      />
-    );
-  };
+const TemplateOne = () => {
+  const RenderEducationAndHealth = ({item}: any) => (
+    <EducationAndHealthItem item={item} />
+  );
+  // "@react-navigation/native": "^6.1.6",
+  // "@react-navigation/native-stack": "^6.9.12",
+  // "@react-navigation/stack": "^6.3.16",
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={image}
-        keyExtractor={(item) => item.id}
-        horizontal
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-        onScroll={handleImageScroll}
-        renderItem={renderImageItem}
-      />
-      <View style={styles.dotIndicator}>{image.map(renderDotIndicator)}</View>
-    </View>
+    <>
+      <View style={{marginHorizontal: getWidth(16)}}>
+        <View style={{marginVertical: Spacing.S35}}>
+          <Header type={'Search'} title={'HOME'}   ></Header>
+        </View>
+        <SnapCarousel data={AdverListImages} />
+
+        <View style={styles.text}>
+          <Text fontFamily="MEDIUMROBOTO" fontSize="FS12" color="GRAY_F5F5F5">
+            {
+              'Holding the fifteenth meeting of the Board of Directors Enterprise'
+            }
+          </Text>
+        </View>
+      </View>
+      <View style={{marginTop: Spacing.S20,marginLeft:getWidth(16)}}>
+        <Text
+          fontFamily="MEDIUMROBOTO"
+          fontSize="FS18"
+          style={{textAlign: 'left', marginBottom: Spacing.S8}}>
+          {"Education"}
+        </Text>
+        <FlatList
+          data={DATA}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          renderItem={RenderEducationAndHealth}
+        />
+      </View>
+      <View style={{marginTop: Spacing.S35, marginLeft:getWidth(16)}}>
+        <Text
+          fontFamily="MEDIUMROBOTO"
+          fontSize="FS18"
+          style={{textAlign: 'left', marginBottom: Spacing.S16}}>
+          {"Health"}
+        </Text>
+        <FlatList
+          data={DATA}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          renderItem={RenderEducationAndHealth}
+        />
+      </View>
+    </>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  imageContainer: {
-    width,
-    height,
-  },
-  image: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
-  dotIndicator: {
-    position: 'absolute',
-    bottom: 20,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    paddingHorizontal: 10,
-  },
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginHorizontal: 5,
-  },
-});
-
-export default ImageCarousel;
+export default TemplateOne;

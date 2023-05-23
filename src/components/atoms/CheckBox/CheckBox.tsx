@@ -39,7 +39,7 @@ const CheckBox: FC<TouchableOpacityProps & {
                textContainerStyle={styles.textStyle}
                 iconContainerStyle={{ marginLeft: 0 }}
                 iconStyle={styles.icon}
-                icon={_isChecked ? _checkIcon : _unCheckIcon}
+                icon={_isChecked ? "Bell" : "Calender"}
                 text={text}
                 style={[styles.button, props.style]}
                  textstyle={{}} 

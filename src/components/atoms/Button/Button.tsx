@@ -34,7 +34,7 @@ type ButtonProps = {
     icon?: IconsName,
     text?: string,
     textType?: TextTypes,
-    textstyle?: StyleProp<TextStyle>,
+    textstyle?: StyleProp<TextStyle>,//textstyle
     color?: string,
     type?: 'default' | 'standard' | 'custom',
     iconRotate?: RotateTypes,

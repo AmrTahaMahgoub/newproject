@@ -76,53 +76,54 @@ const Accordion2: FC<ViewProps & {
         })
 
         return (
-            <View
+            <View></View>
+            // <View
 
-                style={[styles.container2, props.style]}
+            //     style={[styles.container2, props.style]}
 
-            >
-
-
-                <View
-                    style={styles.headerContainer} >
-                    <Text
-                        style={styles.title}
-                        fontFamily='MEDIUM'
-                        color='red'
-                        fontSize={20}
-                    >{title}</Text>
-
-                    <View
-                        style={styles.toggleButtonContainer}>
-                        <Button
-                            containerStyle={animatedButton}
-                            onPress={onSwitch}
-                            icon={'AreaIcon'}
-                            style={{ paddingRight: Spacing.S20 }}
-                            iconStyle={styles.toggleIcon} />
-                        <Button
-                            containerStyle={animatedButton2}
-                            onPress={onSwitch}
-                            icon={'AreaIcon'}
-                            style={styles.toggleButton}
-                            iconStyle={styles.toggleIcon} />
-                    </View>
-
-                </View>
+            // >
 
 
-                <View
-                    style={[height !== 0 ? animatedHeight : {}]}>
-                    <View onLayout={(event) => {
-                        if (height === 0) {
-                            setHeight(event.nativeEvent.layout.height)
-                        }
-                    }}
-                    >
-                        {children}
-                    </View>
-                </View>
-            </View>
+            //     <View
+            //         style={styles.headerContainer} >
+            //         <Text
+            //             style={styles.title}
+            //             fontFamily='MEDIUM'
+            //             color='red'
+            //             fontSize={20}
+            //         >{title}</Text>
+
+            //         <View
+            //             style={styles.toggleButtonContainer}>
+            //             <Button
+            //                 containerStyle={animatedButton}
+            //                 onPress={onSwitch}
+            //                 icon={'AreaIcon'}
+            //                 style={{ paddingRight: Spacing.S20 }}
+            //                 iconStyle={styles.toggleIcon} />
+            //             <Button
+            //                 containerStyle={animatedButton2}
+            //                 onPress={onSwitch}
+            //                 icon={'AreaIcon'}
+            //                 style={styles.toggleButton}
+            //                 iconStyle={styles.toggleIcon} />
+            //         </View>
+
+            //     </View>
+
+
+            //     <View
+            //         style={[height !== 0 ? animatedHeight : {}]}>
+            //         <View onLayout={(event) => {
+            //             if (height === 0) {
+            //                 setHeight(event.nativeEvent.layout.height)
+            //             }
+            //         }}
+            //         >
+            //             {children}
+            //         </View>
+            //     </View>
+            // </View>
 
         )
     }

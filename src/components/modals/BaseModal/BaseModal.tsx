@@ -1,8 +1,7 @@
 import React, { useCallback, useMemo, useRef } from "react";
 import { View, Text, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { TextWithIcon } from "../../molecules/TextWithIcon/TextWithIcon";
-
+import { TextWithIcon } from "../../molecules";
 
 const BaseModal = () => {
   // ref
@@ -26,7 +25,7 @@ const BaseModal = () => {
 
   const renderContent = useCallback(() => (
     <View style={styles.contentContainer}>
-      <TextWithIcon icon="AreaIcon" text="hello" size={"big"} ></TextWithIcon>
+      <TextWithIcon icon="Bell" text="hello" size={"big"} ></TextWithIcon>
     </View>
   ), []);
 

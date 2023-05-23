@@ -30,7 +30,7 @@ const FavoriteButton: FC<ViewProps & {
                 onPress={onFavorite}
                 containerStyle={[styles.container, props.style]}
                 style={styles.button}
-                icon="AreaIcon"
+                icon="Bell"
                 iconStyle={{
                     width: scale(50),
                     height: scale(26),

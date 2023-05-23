@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     viewContainer: {
         flexDirection: "row",
         width: "100%",
-        justifyContent: "space-between",
-        paddingHorizontal: Spacing.S16,
-        paddingTop: Spacing.S8
+        justifyContent: "center",
+       // paddingHorizontal: Spacing.S16,
+       // paddingTop: Spacing.S8
     }
 })
 

@@ -33,7 +33,7 @@ const Rating: FC<ViewProps & {
                     key={`rating_${index}`}
                     style={{ paddingVertical: 0 }}
                     disabled={disabled}
-                    icon='ArrowForward'
+                    icon='RightArrow'
                     iconContainerStyle={{
                         marginLeft: 0
                     }}

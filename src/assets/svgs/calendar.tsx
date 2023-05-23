@@ -3,17 +3,18 @@ import Svg, { SvgProps, G, Path } from "react-native-svg"
 const Calender = (props: SvgProps) => (
   <Svg
    
-    width={24}
-    height={24}
+    width={14}
+    height={14}
     data-name="vuesax/linear/calendar"
     {...props}
   >
     <G
       fill="none"
-      stroke="#8d8d8d"
+      stroke={props.color||"#8d8d8d"}
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={0.5}
+      strokeWidth={1}
+      {...props}
     >
       <Path d="M3.333.833v1.25" />
       <Path

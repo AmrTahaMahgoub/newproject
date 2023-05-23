@@ -30,8 +30,8 @@ const Progress: FC<ViewProps & LineProps> = ({
         <View style={{ alignItems: "flex-end" }}>
             <Text
                 
-                fontFamily="REGULAR"
-                fontSize={10}
+                fontFamily="BOLDLATO"
+                fontSize="FS10"
                 style={styles.progressText}
             >
                 {`${value}%`}
@@ -43,9 +43,9 @@ const Progress: FC<ViewProps & LineProps> = ({
                     style={[styles.progress, { width: value * width / 100 }]} />
             </View>
             {message && <Text
-                fontFamily='REGULAR'
-                color='green'
-                fontSize={50}
+                fontFamily='BOLDLATO'
+                color='CHARCOAL'
+                fontSize="FS10"
                 style={styles.buttomText} >
                 {`You have completed ${completed_lessons} of ${lessons} lessons`}
             </Text>}
