@@ -48,11 +48,40 @@ export type FeaturesAndAnalysisType = {
   name: string
 }
 export const FeaturesAndAnalysisData: FeaturesAndAnalysisType[] = [
-  { id: '1', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: " by Ahmed Khaled" },
-  { id: '2', image: images.motorbike, title: "Russia warns Lithuania over rail transit blockade", name: " by Ahmed Taha" },
-  { id: '3', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: " by Amr Taha" },
-  { id: '4', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: " by Ahmed Khaled" },
-  { id: '5', image: images.motorbike, title: "Russia warns Lithuania over rail transit blockade", name: " by Ahmed Taha" },
-  { id: '6', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: " by Amr Taha" },
+  { id: '1', image: images.motorbike, title: "Russia warns Lithuania over rail transit blockade", name: "by Ahmed Khaled" },
+  { id: '2', image: images.motorbike, title: "Mining giant Glencore admits to bribery in Africa", name: "by Ahmed Taha" },
+  { id: '3', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: "by Amr Taha" },
+  { id: '4', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: "by Ahmed Khaled" },
+  { id: '5', image: images.motorbike, title: "Russia warns Lithuania over rail transit blockade", name: "by Ahmed Taha" },
+  { id: '6', image: images.swimming, title: "Russia warns Lithuania over rail transit blockade", name: "by Amr Taha" },
 
 ];
+/********* */
+export type CategoriesDataType = {
+  id: string;
+  image: any;
+
+  title: string
+}
+export const CategoriesData: CategoriesDataType[] = [
+  { id: '1', image: images.motorbike, title: "Funny" },
+  { id: '2', image: images.motorbike, title: "Economic" },
+  { id: '3', image: images.motorbike, title: "sports" },
+  { id: '4', image: images.motorbike, title: "Funny" },
+
+];
+/********** */
+export type SponsersDataType = {
+  id: string;
+  image: any;
+
+  name: string
+}
+export const SponsersData: SponsersDataType[] = [
+  { id: '1', image: images.person1, name: "Nabil Farouk" },
+  { id: '2', image: images.person2, name: "Ahmed Morad" },
+  { id: '3', image: images.person3, name: "Ahmed Khaled" },
+  { id: '4', image: images.person1, name: "Nabil Farouk" },
+
+];
+

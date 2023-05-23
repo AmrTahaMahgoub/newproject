@@ -52,8 +52,8 @@ export const Input = ({
     return (
         <View>
             <ViewBox
-                border
-                shadow
+                // border
+                // shadow
                 style={[styles.container, style, { opacity: editable === false ? .7 : 1 }]} >
                 {/* <View
                     style={styles.labelView}>

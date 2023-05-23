@@ -12,5 +12,7 @@ export const images = {
     person1:require("./person1.png"),
     person2:require("./person2.png"),
     person3:require("./person3.png"),
+    flowers:require("./flowers.png"),
+    flowers2:require("./flowrs2.png"),
    
 };
