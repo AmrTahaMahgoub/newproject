@@ -28,6 +28,7 @@ const Header: FC<HeaderProps> =({title, icon , onpress,type}) => {
         flexDirection: 'row',
         alignItems: 'center',
         alignContent: 'center',
+       
       }}>
     <Button onPress={onpress}>
         <Svgs name="Listalignleft"></Svgs>

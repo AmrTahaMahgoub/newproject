@@ -14,5 +14,10 @@ export const images = {
     person3:require("./person3.png"),
     flowers:require("./flowers.png"),
     flowers2:require("./flowrs2.png"),
+    luggage:require("./luggage2.png"),
+    sports:require("./sports2.png"),
+    chatbubbles:require("./chatbubble.png"),
+    racing:require("./racing.png"),
+    tedex:require("./tedex.png"),
    
 };

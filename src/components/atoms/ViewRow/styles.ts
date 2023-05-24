@@ -9,7 +9,7 @@ import {
 const styles = StyleSheet.create({
     viewContainer: {
         flexDirection: "row",
-        width: "100%",
+        //width: "100%",
         justifyContent: "center",
        // paddingHorizontal: Spacing.S16,
        // paddingTop: Spacing.S8

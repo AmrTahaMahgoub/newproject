@@ -28,7 +28,7 @@ const styles = StyleSheet.create<{
 }>({
     horizontal: {
         width: "100%", height: 1,
-        backgroundColor: "red",
+        backgroundColor:Colors.GRAY_00000029,
         marginTop: Spacing.S8
     },
     vertical: {

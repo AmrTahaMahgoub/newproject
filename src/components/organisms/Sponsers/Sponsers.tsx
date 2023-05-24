@@ -18,7 +18,7 @@ const SponsersItem = ({item}: {item: SponsersDataType}) => {
         // alignContent: 'flex-start',
         // backgroundColor:"red"
       }}>
-      <Image source={item.image} style={{height: getHeight(82), width:getWidth(82)}}></Image>
+      <Image source={item.image} style={{height: getHeight(82), width:getWidth(82),marginBottom:Spacing.S8}}></Image>
 
       <Text  fontSize='FS12' style={{textAlign: 'center'}}>
         {item.name}

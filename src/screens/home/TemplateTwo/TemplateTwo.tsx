@@ -17,7 +17,7 @@ import TextwithTextIcon from '../../../components/molecules/TextWithIcon/TextWit
 import FeaturesAndAnalysis from '../../../components/organisms/FeaturesAndAnalysis/FeaturesAndAnalysis';
 import CategoriesItem from '../../../components/organisms/Categories/Categories';
 import SponsersItem from '../../../components/organisms/Sponsers/Sponsers';
-import {Spacing} from '../../../styles';
+import {Colors, Spacing} from '../../../styles';
 
 function TemplateTwo() {
   const RenderAdverListWithDateItem = ({item}: any) => (
@@ -35,17 +35,32 @@ function TemplateTwo() {
         marginHorizontal: getWidth(16),
         flexDirection: 'column',
       }}>
-      <View 
+      <View
       //style={{marginBottom: Spacing.S16}}
       >
         <Header title={'HOME'} type="Notifications"></Header>
       </View>
 
-      <View style={{height:"98%"}}>
+      <View style={{height: '98%'}}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={{height: '100%'}}>
             <View style={{marginBottom: Spacing.S30}}>
-              <Input placeholder="Search" label="Search" icon="Search" />
+              <Input
+                placeholder="Search"
+                // label="Search"
+                icon="Search"
+                styleContainer={{
+                  backgroundColor: Colors.WHITE,
+                  height: getHeight(64),
+                  width: getWidth(343),
+                  paddingHorizontal: getWidth(18),
+                }}
+                styleInputContainer={{
+                  // paddingHorizontal: getWidth(18),
+                  height: getHeight(64),
+                  width: getWidth(295),
+                }}
+              />
             </View>
             <View style={{marginBottom: Spacing.S20}}>
               <Text fontSize="FS14" style={{textAlign: 'left'}}>

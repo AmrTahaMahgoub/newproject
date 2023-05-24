@@ -13,3 +13,4 @@ export const S40 = scale(40);
 export const S56 = scale(56);
 export const S64 = scale(64);
 export const S70 = scale(70);
+export const S27 = scale(27);

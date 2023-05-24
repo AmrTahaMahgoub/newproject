@@ -14,10 +14,12 @@ export type ColorsTypes = {
     GRAY_1E1829:string, 
     GRAY_0000005C:string,
     GREEN_009D97:string,
-    SEMIWHITE_F9F9F9:string
-    WHITE_A8A8A8:string
+    SEMIWHITE_F9F9F9:string,
+    WHITE_A8A8A8:string,
+    GRAY_EFEFEF:string
 
 }
+export const GRAY_EFEFEF="#EFEFEF"
 export const WHITE_A8A8A8="#A8A8A8"
 export const SEMIWHITE_F9F9F9="#F9F9F9"
 export const CHARCOAL = '#444444';

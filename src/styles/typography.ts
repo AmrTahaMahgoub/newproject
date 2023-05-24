@@ -5,6 +5,34 @@ import {
     scale
 } from './dimensions';
 
+export type TextFontTypes =
+    |"REGULARROBOTO"
+    |"MEDIUMROBOTO"
+    |"BOLDROBOTO"
+    |"REGULARLATO"
+    |"THINLATO"
+    |"BOLDLATO"
+    |"ITALICROBOTO"
+
+
+
+// export type FontSizeNumericTypes=
+// |H
+// |H2
+// |H3
+// |H4
+// |p
+// |FS14
+// |FS13
+// |FS16
+// |FS12
+// |FS11
+// |FS7
+// |FS10
+// |FS8
+
+
+
 
 export type  FontFamilyTypes = {
     REGULARROBOTO: string,

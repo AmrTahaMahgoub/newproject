@@ -9,9 +9,12 @@ import { Colors } from './src/styles';
 function App () {
     return (
        
-<TemplateTwo></TemplateTwo>
-    
 
+    
+<SafeAreaView style={{flex: 1}}>
+<StatusBar backgroundColor={Colors.GRAY_F5F5F5} />
+<MainNavigator />
+</SafeAreaView>
        
     );
 }
