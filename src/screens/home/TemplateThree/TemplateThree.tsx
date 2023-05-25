@@ -17,7 +17,7 @@ import {Input} from '../../../components/atoms/Input/Input';
 import {Button} from '../../../components/atoms';
 import Svgs from '../../../assets/svgs';
 import CategoriesTemp3Item from '../../../components/organisms/Categories/CategoriesTemp3';
-import PopularItem from '../../../components/organisms/Popular/Popular';
+import PopularTemp3Item from '../../../components/organisms/Popular/PopularTemp3';
 import WorldsItem from '../../../components/organisms/Worlds/Worlds';
 
 function TemplateThree() {
@@ -25,7 +25,7 @@ function TemplateThree() {
   const RenderCategoriesTemp3Item = ({item}: any) => (
     <CategoriesTemp3Item item={item} />
   );
-  const RenderPopularItem = ({item}: any) => <PopularItem item={item} />;
+  const RenderPopularItem = ({item}: any) => <PopularTemp3Item item={item} />;
   const RenderWorldsItem = ({item}: any) => <WorldsItem item={item} />;
   //WorldsItem
   //PopularItem

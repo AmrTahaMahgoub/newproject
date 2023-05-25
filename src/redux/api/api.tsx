@@ -12,6 +12,44 @@ export const AdverListImages: AdverListImagesType[] = [
   {id: '4', source: images.football100},
 ];
 /*************** */
+export interface AdverListTemp4DataType {
+  id: string;
+  image: any;
+  title: string;
+  date: string;
+  location: string;
+}
+export const AdverListTemp4Data: AdverListTemp4DataType[] = [
+  {
+    id: '1',
+    image: images.football100,
+    title: 'Sudan Lifts State Of Emergency Imposed Since Coup',
+    date: 'Mon, 12 Nov 2022 / 7:30 pm',
+    location: 'New Cairo, Cairo, Egypt',
+  },
+  {
+    id: '2',
+    image: images.football200,
+    title: 'Sudan Lifts State Of Emergency Imposed Since Coup',
+    date: 'Mon, 12 Nov 2022 / 7:30 pm',
+    location: 'New Cairo, Cairo, Egypt',
+  },
+  {
+    id: '3',
+    image: images.football100,
+    title: 'Sudan Lifts State Of Emergency Imposed Since Coup',
+    date: 'Mon, 12 Nov 2022 / 7:30 pm',
+    location: 'New Cairo, Cairo, Egypt',
+  },
+  {
+    id: '4',
+    image: images.football100,
+    title: 'Sudan Lifts State Of Emergency Imposed Since Coup',
+    date: 'Mon, 12 Nov 2022 / 7:30 pm',
+    location: 'New Cairo, Cairo, Egypt',
+  },
+];
+/****** */
 export interface AdverListImagesWithDateType {
   id: string;
   source: any;
@@ -129,11 +167,50 @@ export type WorldsDataType = {
 
   title: string;
 };
-export const WorldsData:WorldsDataType[] = [
+export const WorldsData: WorldsDataType[] = [
   {id: '1', image: images.tedex, title: 'Yunni has arrived in Saudi Arabia'},
   {id: '2', image: images.racing, title: 'Yunni has arrived in Saudi Arabia'},
   {id: '3', image: images.tedex, title: 'Yunni has arrived in Saudi Arabia'},
   {id: '4', image: images.racing, title: 'Yunni has arrived in Saudi Arabia'},
+];
+/*** */
+export type WorldsTemp4DataType = {
+  id: string;
+  image: any;
+
+  title: string;
+  subtitle: string;
+  date: string;
+};
+export const WorldsTemp4Data: WorldsTemp4DataType[] = [
+  {
+    id: '1',
+    image: images.tedex,
+    title: 'Yunni has arrived in Saudi Arabia..99999999999999999999999999',
+    subtitle: 'Pabst Theater - Jeddah',
+    date: 'Mon 18 Dec 20',
+  },
+  {
+    id: '2',
+    image: images.racing,
+    title: 'Yunni has arrived in Saudi Arabia',
+    subtitle: 'Pabst Theater - Jeddah',
+    date: 'Mon 18 Dec 20',
+  },
+  {
+    id: '3',
+    image: images.tedex,
+    title: 'Yunni has arrived in Saudi Arabia',
+    subtitle: 'Pabst Theater - Jeddah',
+    date: 'Mon 18 Dec 20',
+  },
+  {
+    id: '4',
+    image: images.racing,
+    title: 'Yunni has arrived in Saudi Arabia',
+    subtitle: 'Pabst Theater - Jeddah',
+    date: 'Mon 18 Dec 20',
+  },
 ];
 /********** */
 export type SponsersDataType = {
@@ -177,6 +254,86 @@ export const CategoriesTemp3Data: CategoriesTemp3DataType[] = [
 ];
 
 /*** */
+export type CategoriesTemp4DataType = {
+  id: string;
+  image1: any;
+
+  title1: string;
+  image2: any;
+
+  title2: string;
+  image3: any;
+
+  title3: string;
+  image4: any;
+
+  title4: string;
+};
+export const CategoriesTemp4Data: CategoriesTemp4DataType[] = [
+  {
+    id: '1',
+    image1: images.luggage,
+    title1: 'Funny',
+    image2: images.sports,
+    title2: 'Comic',
+    image3: images.luggage,
+    title3: 'Funny',
+    image4: images.luggage,
+    title4: 'Religious',
+  },
+  // {id: '2', image: images.chatbubbles, title: 'Economic'},
+  // {id: '3', image: images.sports, title: 'sports'},
+  // {id: '4', image: images.chatbubbles, title: 'Funny'},
+  // {id: '5', image: images.luggage, title: 'Funny'},
+  // {id: '6', image: images.chatbubbles, title: 'Economic'},
+  // {id: '7', image: images.sports, title: 'sports'},
+  // {id: '8', image: images.chatbubbles, title: 'Funny'},
+];
+/**** */
+export type PopularTemp4DataType = {
+  id: string;
+  image: any;
+
+  title: string;
+  subtitle: string;
+
+  duration: string;
+};
+export const PopularTemp4Data: PopularTemp4DataType[] = [
+  {
+    id: '1',
+    image: images.football100,
+    title: 'Ukraine war: Russian Foreign...9999999999999999999',
+    subtitle: 'Comic',
+
+    duration: '6 days ago',
+  },
+  {
+    id: '2',
+    image: images.tedex,
+    title: 'Ukraine war: Russian Foreign...99999999999999999',
+    subtitle: 'Comic',
+
+    duration: '6 days ago',
+  },
+  {
+    id: '3',
+    image: images.football200,
+    title: 'Ukraine war: Russian Foreign...9999999999999999999',
+    subtitle: 'Comic',
+
+    duration: '6 days ago',
+  },
+  {
+    id: '4',
+    image: images.marisa,
+    title: 'Ukraine war: Russian Foreign...999999999999999999',
+    subtitle: 'Comic',
+
+    duration: '6 days ago',
+  },
+];
+/**** */
 export type PopularTemp3DataType = {
   id: string;
   image: any;
@@ -186,7 +343,7 @@ export type PopularTemp3DataType = {
   subtitle: string;
   date: string;
   location: string;
-  duration:string
+  duration: string;
 };
 export const PopularTemp3Data: PopularTemp3DataType[] = [
   {
@@ -195,11 +352,11 @@ export const PopularTemp3Data: PopularTemp3DataType[] = [
     title: 'Heavy fighting as Russi...9999999999999999999',
     subtitle:
       'Lorem ipsum dolor sit amet\n consetetur sadipscing elitr, sed diam nonumy..',
-    comments: "5 comments",
-    likes: "3 likes",
+    comments: '5 comments',
+    likes: '3 likes',
     date: 'Mon, 12 Nov 2022 / 7:30 pm',
     location: 'New Cairo, Cairo, Egypt',
-    duration:"6 days ago"
+    duration: '6 days ago',
   },
   {
     id: '2',
@@ -207,34 +364,34 @@ export const PopularTemp3Data: PopularTemp3DataType[] = [
     title: 'Heavy fighting as Russi...9999999999999999999',
     subtitle:
       'Lorem ipsum dolor sit amet,\n consetetur sadipscing elitr, sed diam nonumy..',
-      comments: "5 comments",
-      likes: "3 likes",
+    comments: '5 comments',
+    likes: '3 likes',
     date: 'Mon, 12 Nov 2022 / 7:30 pm',
     location: 'New Cairo, Cairo, Egypt',
-    duration:"6 days ago"
+    duration: '6 days ago',
   },
   {
     id: '3',
     image: images.motorbike,
     title: 'Heavy fighting as Russi...9999999999999999999',
     subtitle:
-    'Lorem ipsum dolor sit amet,\n consetetur sadipscing elitr, sed diam nonumy..',
-    comments: "5 comments",
-    likes: "3 likes",
+      'Lorem ipsum dolor sit amet,\n consetetur sadipscing elitr, sed diam nonumy..',
+    comments: '5 comments',
+    likes: '3 likes',
     date: 'Mon, 12 Nov 2022 / 7:30 pm',
     location: 'New Cairo, Cairo, Egypt',
-    duration:"6 days ago"
+    duration: '6 days ago',
   },
   {
     id: '4',
     image: images.motorbike,
     title: 'Heavy fighting as Russi...9999999999999999999',
     subtitle:
-    'Lorem ipsum dolor sit amet,\n consetetur sadipscing elitr, sed diam nonumy..',
-    comments: "5 comments",
-    likes: "3 likes",
+      'Lorem ipsum dolor sit amet,\n consetetur sadipscing elitr, sed diam nonumy..',
+    comments: '5 comments',
+    likes: '3 likes',
     date: 'Mon, 12 Nov 2022 / 7:30 pm',
     location: 'New Cairo, Cairo, Egypt',
-    duration:"6 days ago"
+    duration: '6 days ago',
   },
 ];

@@ -6,6 +6,7 @@ export type StackNavigatorParamList = {
   TemplateOne:undefined;
   TemplateTwo: undefined;
   TemplateThree: undefined;
+  TemplateFour: undefined;
  
 };
 export type BottomTabNavigatorTypes = {

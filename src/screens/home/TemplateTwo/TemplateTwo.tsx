@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, View, ScrollView} from 'react-native';
 import Text from '../../../components/atoms/Text/Text';
 import Header from '../../../components/molecules/Header/Header';
-import {getHeight, getWidth} from '../../../styles/dimensions';
+import {getHeight, getWidth, scale} from '../../../styles/dimensions';
 import {Input} from '../../../components/atoms/Input/Input';
 import AdverListWithDate from '../../../components/organisms/AdverList/AdverListWithDate';
 import {
@@ -50,6 +50,7 @@ function TemplateTwo() {
                 // label="Search"
                 icon="Search"
                 styleContainer={{
+                  borderRadius:scale(12),
                   backgroundColor: Colors.WHITE,
                   height: getHeight(64),
                   width: getWidth(343),

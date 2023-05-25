@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignSelf: 'center',
     //     paddingHorizontal: 0,
-    borderRadius: scale(16),
+   // borderRadius: scale(16),
   },
   inputStyle: {
     fontSize: Typography.FS12,

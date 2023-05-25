@@ -16,7 +16,8 @@ export type ColorsTypes = {
     GREEN_009D97:string,
     SEMIWHITE_F9F9F9:string,
     WHITE_A8A8A8:string,
-    GRAY_EFEFEF:string
+    GRAY_EFEFEF:string,
+    WHITE_FBFBFB:string
 
 }
 export const GRAY_EFEFEF="#EFEFEF"
@@ -32,6 +33,7 @@ export const GRAY_323232 = "#323232"
 export const GRAY_1E1829 = "#1E1829"
  export const GRAY_0000005C = "#0000005C"
  export const GREEN_009D97 = "#009D97"
+ export const WHITE_FBFBFB="#FBFBFB"
 
 export const PRIMARY_GRADIENT = ["#6222A4", "#7322A7"]
 export const DARK_GRAY = "gray"

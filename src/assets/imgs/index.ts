@@ -19,5 +19,6 @@ export const images = {
     chatbubbles:require("./chatbubble.png"),
     racing:require("./racing.png"),
     tedex:require("./tedex.png"),
+    marisa:require("./marisa.png"),
    
 };

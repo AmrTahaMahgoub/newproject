@@ -9,7 +9,7 @@ import {Line, ViewRow} from '../../atoms';
 import {TextWithIcon} from '../../molecules';
 import Svgs from '../../../assets/svgs';
 
-const PopularItem = ({item}: {item: PopularTemp3DataType}) => {
+const PopularTemp3Item = ({item}: {item: PopularTemp3DataType}) => {
   return (
     <ViewRow
       style={{
@@ -97,4 +97,4 @@ const PopularItem = ({item}: {item: PopularTemp3DataType}) => {
   );
 };
 
-export default PopularItem;
+export default PopularTemp3Item;
